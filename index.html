@@ -78,7 +78,8 @@
 		else
 		{
 			//alert('Android');
-			window.plugins.fileOpener.open('file:///android_asset/www/'+url);
+			window.plugins.fileOpener.open('file:///'+url);
+			window.open(encodeURI('file:///'+url), '_blank', 'EnableViewPortScale=yes','location=yes');
 			//navigator.app.loadUrl('file:///android_asset/www/'+url);
 		}
 	}
