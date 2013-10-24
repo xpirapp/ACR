@@ -89,9 +89,14 @@ function downloadFile(filePath)
 		window.requestFileSystem(
 					 LocalFileSystem.PERSISTENT, 0, 
 					 function onFileSystemSuccess(fileSystem) {
+					 alert('Download 2 ');
+					 
 					 fileSystem.root.getFile(
+					 
 								 "index.html", {create: true, exclusive: false}, 
 								 function gotFileEntry(fileEntry){
+									 
+									 alert('Download 3');
 								 var sPath = fileEntry.fullPath.replace("index.html","");
 								 var fileTransfer = new FileTransfer();
 								 fileEntry.remove();
