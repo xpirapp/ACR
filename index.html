@@ -17,7 +17,7 @@
   <script src="lib/js/mobile_pages/js_notas.js"></script>
   <script src="lib/js/mobile_pages/js_san_diego.js"></script>
   <script src="lib/js/mobile_pages/js_informacoes.js"></script>
-  
+  <script type="text/javascript" charset="utf-8" src="fileopener.js"></script>
   
   <script>
   OpenDataBase();
@@ -61,7 +61,7 @@
 	{
 		
 		if (navigator.userAgent.match(/(iPad|iPhone);/i)) {
-			alert('IOS');
+			//alert('IOS');
 			try {
 	
 			   var strPath = window.location.href;
@@ -77,8 +77,9 @@
 		}
 		else
 		{
-			alert('Android');
-			navigator.app.loadUrl('file:///android_asset/www/'+url);
+			//alert('Android');
+			window.plugins.fileOpener.open('file:///android_asset/www/'+url);
+			//navigator.app.loadUrl('file:///android_asset/www/'+url);
 		}
 	}
 	
@@ -534,7 +535,7 @@ Para maiores informações acesse <a href="#" onClick="handleExternalPage('http:
                 
                 <li >
                     <h2>Ligação dos EUA para o Brasil</h2>
-                    <p>00 55 (operadora) (prefixo da cidade) XXXX XXXX(número do telefone)</p>
+                    <p>00 55 (operadora)(prefixo da cidade)(número do telefone)</p>
                 </li>
             </ul>  
              </div>
