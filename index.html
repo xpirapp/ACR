@@ -24,16 +24,13 @@
   handleCreateDb();
   handleStateMachineMain('getUserOnSql');
   function handlerEraseDb()
-	{
-		
-			db.transaction(handlerEraseDbTransaction, handleDbError);
-	}
+  {
+	db.transaction(handlerEraseDbTransaction, handleDbError);
+  }
 
   function reseteUl()
 	{
 		$('#pageDetalheUl').empty();
-		//$('#pageNotasUl').empty();
-			
 	}
 	
   function handleExternalPage(url)
