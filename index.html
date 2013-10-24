@@ -39,7 +39,7 @@
 	
   function handleExternalPage(url)
 	{
-		window.open(url, '_blank', 'location=yes');
+		window.open(url, '_blank', 'EnableViewPortScale=yes','location=yes');
 	};
 	
 	document.addEventListener('deviceready', onDeviceReady, false);
@@ -67,7 +67,7 @@
 		   var path = strPath.substr(0,strPath.lastIndexOf('www')) + "www/"+ url;
 		   path = path.replace('file:///', '/');
 		  
-			window.open(encodeURI(path), '_blank');//, 'location=yes'
+			window.open(encodeURI(path), '_blank', 'EnableViewPortScale=yes','location=yes');//
 		   }
 		   catch (err)
 		   {
