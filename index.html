@@ -48,8 +48,8 @@
 	  
 	
 		if (navigator.userAgent.match(/(iPad|iPhone);.*CPU.*OS 7_\d/i)) {
-			$("body").addClass("ios7");
-			$('body').append('<div id="ios7statusbar"/>');
+			//$("body").addClass("ios7");
+			//$('body').append('<div id="ios7statusbar"/>');
 		}
 		
 		if (parseFloat(window.device.version) >= 7.0) {
@@ -67,7 +67,7 @@
 		   var path = strPath.substr(0,strPath.lastIndexOf('www')) + "www/"+ url;
 		   path = path.replace('file:///', '/');
 		  
-			window.open(encodeURI(path), '_blank', 'location=yes');
+			window.open(encodeURI(path), '_blank');//, 'location=yes'
 		   }
 		   catch (err)
 		   {
@@ -85,14 +85,13 @@
 <body>
 	<!-- ---------------------------------- -->
     <!-- --------------LOGIN---------------- -->
-    <!-- ------------------------------------>
+    <!-- ----------------------------------
     <div data-role="page" class="login" id="cadastro">
         
         <div class="form-login">
             
             <ul id="ulCadastroUser">
-                <!--<li><input type="text" name="fieldNome" id="fieldNome"  placeholder="Nome" value="" ></li>-->
-                <li><input type="text" name="fieldEmail" id="fieldEmail" placeholder="E-mail" value=""></li>
+                 <li><input type="text" name="fieldEmail" id="fieldEmail" placeholder="E-mail" value=""></li>
                 <li class="bt-acesso-login" id="bt_cadastro" onClick="handleStateMachineMain('handleCadUser');">
                     <img src="images/template_ipad/bt_confirmar.png">
                 </li>
@@ -101,7 +100,7 @@
             
         </div>
        
-     </div>
+     </div>-->
 
 
 	<!-- ---------------------------------- -->
